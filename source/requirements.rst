@@ -7,9 +7,7 @@ PHP 5.5.9 or later is required.
 
 * `MySQL`_ or `MariaDB`_.
 
-PHP dependencies with `Composer`_. The Symfony framework has
-additional requirements for PHP. Composer should be installed
-globally.
+PHP dependencies are handled with `Composer`_. Composer should be installed globally. The Symfony framework has additional requirements for PHP.
 
 Javascript and CSS dependencies are managed with `Bower`_, which requires
 `NPM`_ and `NodeJS`_.

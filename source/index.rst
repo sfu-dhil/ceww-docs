@@ -17,14 +17,6 @@ User Manual
 
    about
 
-Admin Manual
-------------
-
-.. toctree::
-   :maxdepth: 1
-
-   about
-
               
 Technical manual
 ----------------
@@ -36,4 +28,3 @@ Technical manual
    install
    update
    config
-   todo
