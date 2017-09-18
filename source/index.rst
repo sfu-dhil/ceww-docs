@@ -17,8 +17,9 @@ User Manual
 
    about
 
+
 Admin Manual
-------------
+--------------
 
 .. toctree::
    :maxdepth: 1
