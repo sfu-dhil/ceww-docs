@@ -1,6 +1,6 @@
 .. _about:
 
-About Canadian Early Women Writers
+About Canada's Early Women Writers
 ==================================
 
 The Database of Canada’s Early Women Writers (DoCEWW) at Simon Fraser University is associated with the larger Canada’s Early Women Writers (CEWW) project, which is part of the `Canadian Writing Research Collaboratory (CWRC)`_. Both projects include women authors who either lived for an extensive period of time in Canada or self-identified as Canadian, and who published some form of writing in English—in any genre and in any forum—up to and including 1950.

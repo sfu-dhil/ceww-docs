@@ -26,7 +26,7 @@ The CEWW application is based on Symfony 3.2. Installation follows the normal pr
 
 3. Create a database and database user. 
 
-.. note:: On Windows you can use a server suite like `XAMPP`_ or `WAMP` -make sure you get the right PHP version.
+.. note:: On Windows you can use a server suite like `XAMPP`_ or `WAMP`_ -make sure you get the right PHP version.
   
 .. code-block:: sql
 
@@ -36,7 +36,7 @@ The CEWW application is based on Symfony 3.2. Installation follows the normal pr
 
 .. note:: Composer should ask for these automatically when installing the dependencies. In case if it doesn't, you can later pass the database parameters to the 'parameters.yml' file under the 'ceww/app/config/' manually.
 
-4. `Install Composer`_ if it isn't already installed somewhere. Make sure you do a global installation
+4. `Install Composer`_ if it isn't already installed somewhere. Make sure you do a global installation.
   
 5. Install the Composer dependencies (make sure the working directory is 'ceww'). Composer will ask for some configuration variables during installation.
   
@@ -74,7 +74,8 @@ Sometimes Composer runs out of memory. If that happens, try this alternate.
 
 10. Configure the web server. The application's `web/` directory must be accessible to the world. Symfony provides `example configurations`_ for most server setups.
 
-11. The documentation module should be built seperately. You need to be Sphinx already installed. Check the `DHIL Documentation Guide`_ for more information. 
+
+11. The documentation module should be built seperately. You need the Sphinx to be already installed. Check the `DHIL Documentation Guide`_ for more information. 
 
 Navigate to the 'ceww/docs' directory in the command line and type: 
 
