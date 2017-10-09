@@ -5,7 +5,7 @@ Testing
 
 DHIL Symfony applications use `PHPUnit Testing Framework`_ to run automated tests on the code components. PHPUnit manual is `here <https://phpunit.de/manual/6.3/en/index.html>`_. A comprehensive tutorial can be found `here <https://jtreminio.com/2013/03/>`_.
 
-.. note:: PHPUnit is enabled after installing Composer and CEWW specific composer dependencies. It should be located at ceww/vendor/bin/phpunit. If, for some reason, this is not the case, simply follow the installation guide `here <https://phpunit.de/manual/current/en/installation.html>`_. Make sure you use the right version (supporting PHP 5.5.9 or later).
+.. note:: PHPUnit is enabled after installing Composer and CEWW specific composer dependencies. It should be located at ceww/vendor/bin/phpunit. You can check the installation guide `here <https://phpunit.de/manual/current/en/installation.html>`_ for more details. 
 
 1. Navigate into the ceww main directory. Check to see if the phpunit is active:
 
@@ -25,7 +25,7 @@ Alternatively, you can run the entire test suite by omitting the file path:
 
   vendor/bin/phpunit 
 
-.. note:: running the entire test suite can take a lot of time. You can fasten this process by replacing the "phpunit.xml.dist" file with the "phpunit.xml" (simply remove the extension).
+.. note:: Running the entire test suite can take a lot of time. You can fasten this process by replacing the "phpunit.xml.dist" file with the "phpunit.xml" (simply remove the extension). You can then tweak the `configuration file <https://phpunit.de/manual/current/en/appendixes.configuration.html>`_ to suit your needs. 
 
 3. It would be helpful to get some sort of report on our tests. PHPUnit comes with a code coverage analysis tool. This tool needs the `Xdebug`_ extension for PHP to be enabled.
 
