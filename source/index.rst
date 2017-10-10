@@ -1,6 +1,6 @@
 .. _home:
 
-Canadian Early Women Writers Documentation
+Canada's Early Women Writers Documentation
 ==========================================
 
 An open access, searchable database that will house and deliver a comprehensive 
@@ -37,4 +37,5 @@ Technical manual
    install
    update
    config
+   testing
    todo
