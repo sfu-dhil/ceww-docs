@@ -72,10 +72,16 @@ Sometimes Composer runs out of memory. If that happens, try this alternate.
 
   bower install
 
-10. Configure the web server. The application's `web/` directory must be accessible to the world. Symfony provides `example configurations`_ for most server setups.
+10. Download and install CkEditor. It is a nice GUI editor for web content. It isn't redistributable itself, so must be downloaded separately.
 
+.. code-block:: bash
 
-11. The documentation module should be built seperately. You need the Sphinx to be already installed. Check the `DHIL Documentation Guide`_ for more information. 
+  ./bin/console ckeditor:install
+  ./bin/console assets:install web --symlink
+
+11. Configure the web server. The application's `web/` directory must be accessible to the world. Symfony provides `example configurations`_ for most server setups.
+
+12. The documentation module should be built seperately. You need the Sphinx to be already installed. Check the `DHIL Documentation Guide`_ for more information. 
 
 Navigate to the 'ceww/docs' directory in the command line and type: 
 
@@ -83,7 +89,7 @@ Navigate to the 'ceww/docs' directory in the command line and type:
 
   make html
 
-12. Start the web server you are using. A quick way to run the application is by using the built-in php server.
+13. Start the web server you are using. A quick way to run the application is by using the built-in php server.
 
 .. code-block:: bash
 
