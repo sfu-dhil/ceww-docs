@@ -91,6 +91,8 @@ Navigate to the 'ceww/docs' directory in the command line and type:
 
 13. Start the web server you are using. A quick way to run the application is by using the built-in php server.
 
+.. note:: I've you've configured Apache to run the site, this step isn't necessary. Visit http://localhost/path/to/app_dev.php.
+
 .. code-block:: bash
 
   php bin/console server:start
