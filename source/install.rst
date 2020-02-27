@@ -31,6 +31,7 @@ The CEWW application is based on Symfony 3.2. Installation follows the normal pr
 .. code-block:: sql
 
   create database ceww;
+  create user if not exists ceww@localhost;
   grant all on ceww.* to ceww@localhost;
   set password for ceww@localhost = password('hotpockets');
 
@@ -72,11 +73,10 @@ Sometimes Composer runs out of memory. If that happens, try this alternate.
 
   bower install
 
-10. Download and install CkEditor. It is a nice GUI editor for web content. It isn't redistributable itself, so must be downloaded separately.
+10. Install the required assets using the below command.
 
 .. code-block:: bash
 
-  ./bin/console ckeditor:install
   ./bin/console assets:install web --symlink
 
 11. Configure the web server. The application's `web/` directory must be accessible to the world. Symfony provides `example configurations`_ for most server setups.
@@ -89,15 +89,11 @@ Navigate to the 'ceww/docs' directory in the command line and type:
 
   make html
 
-13. Start the web server you are using. A quick way to run the application is by using the built-in php server.
-
-.. note:: I've you've configured Apache to run the site, this step isn't necessary. Visit http://localhost/path/to/app_dev.php.
+13. Start the Symfony server by using the below command and navigate to the link displayed.
 
 .. code-block:: bash
 
-  php bin/console server:start
-
-Go to the localhost:8000 in your browser.
+  symfony server:start
 
 At this point, the web interface should be up and running, and you should be able to login by following the Login link in the top right menu bar.
 
