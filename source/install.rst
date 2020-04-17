@@ -9,7 +9,7 @@ Installation
 
 Make sure the requirements are satisfied.
 
-The CEWW application is based on Symfony 3.2. Installation follows the normal process for installing a Symfony application.
+The CEWW application is based on Symfony 4.4. Installation follows the normal process for installing a Symfony application.
 
 1. Get the code from GitHub. 
 
@@ -52,8 +52,10 @@ Sometimes Composer runs out of memory. If that happens, try this alternate.
   php -d memory_limit=-1 `which composer` install --no-dev -o
 
 6. Update file permissions if needed. The user running the web server must be able to write to `var/cache/*` and `var/logs/*` and `var/sessions/*`. The symfony docs provide `recommended commands`_ depending on your OS.
+
+7. Please follow the instructions in the config.rst file to set up the configuration settings for this project.
   
-7. Load the schema into the database. This is done with the Symfony console.
+8. Load the schema into the database. This is done with the Symfony console.
   
 .. code-block:: bash
 
@@ -63,23 +65,25 @@ Sometimes Composer runs out of memory. If that happens, try this alternate.
   
 .. code-block:: bash
 
-  ./bin/console fos:user:create admin@example.com
-  ./bin/console fos:user:promote admin@example.com ROLE_ADMIN
+  ./bin/console nines:create:user
   
 
-9. Install Bower, npm, and NodeJS if you haven't. In the 'ceww' directory, use bower to download and install the javascript and css dependencies.
+9. If you haven't installed npm and yarn globally, you will have to install them. You could do this by running the below commands in the terminal.
   
 .. code-block:: bash
 
-  bower install
+  sudo apt install npm
+  sudo npm install --global yarn
 
-10. Install the required assets using the below command.
-
+10. If you have installed npm and yarn globally, then set up yarn for this project by running the below command inside project directory.
+  
 .. code-block:: bash
 
-  ./bin/console assets:install web --symlink
+  yarn install
 
-11. Configure the web server. The application's `web/` directory must be accessible to the world. Symfony provides `example configurations`_ for most server setups.
+11. Configure the web server. The application's `public/` directory must
+    be accessible to the world. Symfony provides `example
+    configurations`_ for most server setups.
 
 12. The documentation module should be built seperately. You need the Sphinx to be already installed. Check the `DHIL Documentation Guide`_ for more information. 
 
@@ -89,13 +93,20 @@ Navigate to the 'ceww/docs' directory in the command line and type:
 
   make html
 
-13. Start the Symfony server by using the below command and navigate to the link displayed.
-
+12. Start the Symfony server by using the below command and navigate to the link displayed.
+  
 .. code-block:: bash
 
   symfony server:start
 
-At this point, the web interface should be up and running, and you should be able to login by following the Login link in the top right menu bar.
+At this point, the web interface should be up and running, and you should
+be able to login by following the Login link in the top right menu bar.
+
+13. Once everything is done, you should stop the Symfomny server. Before you close the terminal, make sure to stop the server using this command.
+  
+.. code-block:: bash
+
+  symfony server:stop
 
 That should be it.
 
