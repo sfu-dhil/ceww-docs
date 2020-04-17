@@ -3,41 +3,33 @@
 Configuration
 =============
 
-Most of the application is configured with the symfony parameters.yml
-file in app/config/parameters.yml.
+Most of the application is configured with the symfony .env file present in the project directory.
+1. You can find this file by listing out all hidden files in the directory using the command below.
 
-.. code-block:: yaml
+.. code-block:: bash
+
+  ls -al
+
+2. Copy the .env file to .env.local using the below command.
+
+.. code-block:: bash
+
+  cp .env .env.local
+
+3. Edit this .env.local file using any editor to make the below configuration changes.
+
+.. code-block:: bash
    
-   parameters:
-     # database configuration
-     database_host: 127.0.0.1
-     database_port: null
-     database_name: btd
-     database_user: btd
-     database_password: abc123
+     # Disable the mailer DSN by changing it to null://null
+     MAILER_DSN=null://null
 
-     # mailer configuration
-     mailer_transport: smtp
-     mailer_host: 127.0.0.1
-     mailer_user: null
-     mailer_password: null
+     # Set the database configuration for the project: database user name(db_user), password(db_password) and database_name(db_name)
+     DATABASE_URL=mysql://db_user:db_password@127.0.0.1:3306/db_name?serverVersion=5.7
 
-     # A secret key that's used to generate certain security-related tokens
-     secret: this is a secret so change it.
+     # To use symfony to start the server change ROUTE_BASE to
+     ROUTE_BASE=/
 
-     # Router and cookie information
-     router.request_context.scheme: http
-     router.request_context.host: example.com
-     router.request_context.base_url: /path/to/application
+     # To set the cookie configuration for the site set ROUTE_HOST to
+     ROUTE_HOST=127.0.0.1
 
-     # If true, send all HTTP cookies with the https_only flag set.
-     secure_cookies: false
 
-     # words in a generated excerpt
-     nines_blog.excerpt_length: 50
-
-     # number of posts to show on the home page
-     nines_blog.homepage_posts: 3
-
-     # number of posts to show in the drop down menu.
-     nines_blog.menu_posts: 5
